@@ -1,0 +1,98 @@
+.form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    background-image: linear-gradient(45deg, #330808, 
+    #0a6783);
+    border-radius: 2.5em;
+    padding: 30px;
+    width: 1000px;
+    height: 350px;
+    justify-content: center;
+  }
+  
+  .form::before {
+    content: '';
+    background-image: linear-gradient(45deg, #ff0000, 
+    #ffb700);
+    height: 358px;
+    width: 309px;
+    position: absolute;
+    margin-top: -34px;
+    margin-left: px;
+    z-index: -1;
+    border-radius: 2.7em;
+  }
+  
+  .input {
+    width: calc(100% - 10px);
+    padding: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #141fbb00;
+    border-bottom: 1px solid #006eff;
+    outline: none;
+    background-color: transparent;
+    color: #006eff;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: 0.2s;
+  }
+  
+  .input:focus {
+    border: 1px solid #66da4300;
+    border-bottom: 1px solid #ff5900;
+    background-color: transparent;
+    color: white;
+  }
+  
+  .input::placeholder {
+    color: #9b725b;
+  }
+  
+  .textarea {
+    font-family: Arial, Helvetica, sans-serif;
+    width: calc(100% - 10px);
+    padding: 8px;
+    height: 100px;
+    margin-bottom: 20px;
+    border: 1px solid #66da4300;
+    border-bottom: 1px solid #006eff;
+    outline: none;
+    background-color: transparent;
+    color: #ff5900;
+  }
+  
+  .textarea::placeholder {
+    color: #9b725b;
+  }
+  
+  .textarea:focus {
+    border: 1px solid #66da4300;
+    border-bottom: 1px solid #ff5900;
+    background-color: transparent;
+    color: white;
+  }
+
+  #sub {
+    padding: 17px 40px;
+    border-radius: 10px;
+    border: 0;
+    background-color: rgb(11, 145, 123);
+    letter-spacing: 1.5px;
+    font-size: 15px;
+    transition: all .3s ease;
+    box-shadow: rgb(9, 163, 142) 0px 10px 0px 0px;
+    color: hsl(0, 0%, 100%);
+   }
+   
+   #sub:hover {
+    box-shadow: rgb(9, 163, 142) 0px 7px 0px 0px;
+   }
+   
+   sub:active {
+    background-color: rgb(11, 145, 123);
+    /*50, 168, 80*/
+    box-shadow: rgb(9, 163, 142) 0px 0px 0px 0px;
+    transform: translateY(5px);
+    transition: 200ms;
+   }

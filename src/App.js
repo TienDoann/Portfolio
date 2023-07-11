@@ -3,8 +3,9 @@ import scrollImage from "./img/GTT.png";
 import "./App.css";
 import { Link } from "react-scroll";
 import About from "./Components/About/About";
-import Contact from "./Components/Contact";
+import Contact from "./Components/Contact/Contact";
 import Home from "./Components/Home/Home";
+import Project from "./Components/Projects/project";
 import { useEffect, useState } from "react";
 
 export default function App() {
@@ -18,9 +19,10 @@ export default function App() {
       window.removeEventListener("scroll", handleScroll);
     };
   });
+
   return (
-    <div className="App" style={{ backgroundColor: "black" }}>
-      <header className="nav">
+    <div className="App" style={{ backgroundColor: "#041C32"}}>
+      <header className="nav" style={{position: 'fixed'}}>
         <nav className="nav__container__actions">
           <div style={{ textAlign: "left" }}>
             <img
@@ -44,6 +46,11 @@ export default function App() {
               </Link>
             </li>
             <li>
+              <Link activeClass="active" smooth spy to="pro">
+                PROJECT
+              </Link>
+            </li>
+            <li>
               <Link activeClass="active" smooth spy to="contact">
                 CONTACT ME
               </Link>
@@ -56,6 +63,9 @@ export default function App() {
       </section>
       <section id="about">
         <About />
+      </section>
+      <section id="pro">
+        <Project />
       </section>
       <section id="contact">
         <Contact />
