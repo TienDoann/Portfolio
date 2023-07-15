@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Portfolio/static/css/main.ee533f50.css",
+    "main.js": "/Portfolio/static/js/main.49a2a713.js",
+    "static/js/787.adc5ffe0.chunk.js": "/Portfolio/static/js/787.adc5ffe0.chunk.js",
+    "static/media/ava2.png": "/Portfolio/static/media/ava2.a17ac9ec58fe84ff1c50.png",
+    "static/media/CV-Đoàn Liêng Tiến - Intern Fresher Develop.pdf": "/Portfolio/static/media/CV-Đoàn Liêng Tiến - Intern Fresher Develop.dc76f1d1fda8a6a905c2.pdf",
+    "static/media/github.png": "/Portfolio/static/media/github.4bb497e598c121a691f7.png",
+    "static/media/avaTom.png": "/Portfolio/static/media/avaTom.4694826c09e68efe5b44.png",
+    "static/media/Programming.png": "/Portfolio/static/media/Programming.40446ffb09173d68f272.png",
+    "static/media/GTT.png": "/Portfolio/static/media/GTT.a600dc06f7f102b1059a.png",
+    "static/media/fb.png": "/Portfolio/static/media/fb.7008f188de5499b14dc7.png",
+    "index.html": "/Portfolio/index.html",
+    "main.ee533f50.css.map": "/Portfolio/static/css/main.ee533f50.css.map",
+    "main.49a2a713.js.map": "/Portfolio/static/js/main.49a2a713.js.map",
+    "787.adc5ffe0.chunk.js.map": "/Portfolio/static/js/787.adc5ffe0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ee533f50.css",
+    "static/js/main.49a2a713.js"
+  ]
+}
