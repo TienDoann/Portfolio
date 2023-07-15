@@ -15,6 +15,7 @@ function Contact() {
   };
   return (
     <div>
+      <h1 style={{color:'white'}}>Contact me</h1>
       <form class="form" onSubmit={onSubmit}>
         <input class="input" type="text" placeholder="Your Mail" name="email"
           id="email" />
