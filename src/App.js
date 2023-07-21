@@ -21,7 +21,7 @@ export default function App() {
   });
 
   return (
-    <div className="App" style={{ backgroundColor: "black"}}>
+    <div className="App" style={{ backgroundColor: '#021c1E'}}>
       <header className="nav" style={{position: 'fixed'}}>
         <nav className="nav__container__actions">
           <div style={{ textAlign: "left" }}>
@@ -29,6 +29,7 @@ export default function App() {
               alt=""
               src={avaTom}
               className="ava"
+              style={{height:'40px', width:'40px'}}
               onClick={() => {
                 window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
               }}
@@ -61,13 +62,13 @@ export default function App() {
       <section id="home">
         <Home />
       </section>
-      <section id="about">
+      <section id="about" style={{backgroundColor:'#003B46'}}>
         <About />
       </section>
       <section id="pro">
         <Project />
       </section>
-      <section id="contact">
+      <section id="contact" style={{backgroundColor:'#003B46'}}>
         <Contact />
       </section>
       {scroll && (

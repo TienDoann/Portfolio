@@ -65,7 +65,7 @@ function Project() {
                         <span>React native</span>
                         <span>.Net Core 6</span>
                     </div>
-                    <p className='src'>Source: (private)</p>
+                    {/* <p className='src'>Source: (private)</p> */}
                 </div>
                 <div class="footer">
                     by Cty TNHH Điện điện tử C&T DevTeam
