@@ -21,7 +21,7 @@ export default function App() {
   });
 
   return (
-    <div className="App" style={{ backgroundColor: "#041C32"}}>
+    <div className="App" style={{ backgroundColor: "black"}}>
       <header className="nav" style={{position: 'fixed'}}>
         <nav className="nav__container__actions">
           <div style={{ textAlign: "left" }}>
