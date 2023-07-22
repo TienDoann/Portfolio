@@ -35,7 +35,7 @@ function Contact() {
   }
   return (
     <div>
-      <h1 style={{ color: 'white' }}>Contact me</h1>
+      <h1 style={{ color: 'white',fontFamily:"ca",textTransform:"uppercase" }}>Contact me</h1>
       <form className="form" onSubmit={onSubmit}>
         <input className="input" type="text" placeholder="Your Mail" name="email" required onChange={handleChange} value={email}
           id="email" />

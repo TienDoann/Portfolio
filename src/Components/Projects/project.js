@@ -2,7 +2,7 @@ import './project.css'
 function Project() {
     return (
         <div>
-            <h1 style={{color:'white'}}>Some Highlight Project</h1>
+            <h1 style={{color:'white',fontFamily:"ca",textTransform:"uppercase"}}>Some Highlight Project</h1>
             <div style={{display:'flex'}}>
             <div class="card">
                 <div class="main-content">
