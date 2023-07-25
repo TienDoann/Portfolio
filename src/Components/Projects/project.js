@@ -3,20 +3,20 @@ function Project() {
     return (
         <div>
             <h1 style={{color:'white',fontFamily:"ca",textTransform:"uppercase"}}>Some Highlight Project</h1>
-            <div style={{display:'flex'}}>
-            <div class="card">
-                <div class="main-content">
-                    <div class="header">
+            <div className='container'>
+            <div className="card">
+                <div className="main-content">
+                    <div className="header">
                         <span>Article on</span>
                         <span>2021-2022</span>
                     </div>
-                    <p class="heading">Quản lý Bán hàng linh kiện điện tử</p>
-                    <div class="categories">
+                    <p className="heading">Quản lý Bán hàng linh kiện điện tử</p>
+                    <div className="categories">
                         <span>ASP.NET</span>
                     </div>
                     <p className='src'>Source: https://github.com/TienDoann/ProjectDA3-MVC</p>
                 </div>
-                <div class="footer">
+                <div className="footer">
                     by Đoàn Liêng Tiến
                 </div>
             </div>

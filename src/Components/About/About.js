@@ -12,9 +12,9 @@ function About() {
 
   return (
     <div className="">
-      <div style={{ display: 'flex', textAlign: 'left' }}>
+      <div className="info" >
         <div style={{ width: '800px', margin: 'auto'}}>
-          <img alt="" src={ava} style={{ borderRadius: '20px', width: '22em',border:"5px solid white" }} />
+          <img className="setImg"  alt="" src={ava} style={{ borderRadius: '20px', width: '22em',border:"5px solid white" }} />
         </div>
         <div style={{ width: '800px'}}>
           <h3 style={{ color: 'white',textTransform:"uppercase" ,fontFamily:"ca"}}>Let's get know about me closer</h3>

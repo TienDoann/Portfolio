@@ -48,3 +48,18 @@ p {
     transform: translateY(0px);
   }
 }
+
+@media screen and  (min-width: 46.25em) and (max-width: 63.9375em) {
+ .content {
+  flex-direction: column;
+  margin-top: 40px;
+ } 
+ .content img{
+  width: 8em;
+ }
+ .introduction {
+  height: 400px;
+  font-weight: 100;
+  padding-inline: 20px;
+ }
+}
