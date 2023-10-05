@@ -1,5 +1,15 @@
 import './project.css'
+import React from 'react';
 function Project() {
+    const handleClick = () => {
+        window.location.href = 'https://github.com/TienDoann/ProjectDA3-MVC'
+    };
+    const handleClick1 = () => {
+        window.location.href = 'https://github.com/TienDoann/MobileGame'
+    };
+    const handleClick2 = () => {
+        window.location.href = 'https://github.com/TienDoann/PyGame'
+    };
     return (
         <div>
             <h1 style={{color:'white',fontFamily:"ca",textTransform:"uppercase"}}>Some Highlight Project</h1>
@@ -14,7 +24,7 @@ function Project() {
                     <div className="categories">
                         <span>ASP.NET</span>
                     </div>
-                    <p className='src'>Source: https://github.com/TienDoann/ProjectDA3-MVC</p>
+                    <p className='src'><button className='btnPro' onClick={handleClick}>Xem</button></p>
                 </div>
                 <div className="footer">
                     by Đoàn Liêng Tiến
@@ -30,7 +40,7 @@ function Project() {
                     <div class="categories">
                         <span>Java</span>
                     </div>
-                    <p className='src'>Source: https://github.com/TienDoann/MobileGame</p>
+                    <p className='src'><button className='btnPro' onClick={handleClick1}>Xem</button></p>
                 </div>
                 <div class="footer">
                     by Đoàn Liêng Tiến
@@ -47,7 +57,7 @@ function Project() {
                         <span>Python</span>
                         <span>Pygame</span>
                     </div>
-                    <p className='src'>Source: https://github.com/TienDoann/PyGame</p>
+                    <p className='src'><button className='btnPro' onClick={handleClick2}>Xem</button></p>
                 </div>
                 <div class="footer">
                     by Đoàn Liêng Tiến

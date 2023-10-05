@@ -21,10 +21,10 @@ export default function App() {
   });
 
   return (
-    <div className="App" style={{ backgroundColor: '#021c1E'}}>
+    <div className="App">
       <header className="nav" style={{position: 'fixed'}}>
         <nav className="nav__container__actions">
-          <div style={{ textAlign: "left" }}>
+        <div style={{ textAlign: "left" }}>
             <img
               alt=""
               src={avaTom}
@@ -62,13 +62,13 @@ export default function App() {
       <section id="home">
         <Home />
       </section>
-      <section id="about" style={{backgroundColor:'#003B46'}}>
+      <section id="about">
         <About />
       </section>
       <section id="pro">
         <Project />
       </section>
-      <section id="contact" style={{backgroundColor:'#003B46'}}>
+      <section id="contact">
         <Contact />
       </section>
       {scroll && (

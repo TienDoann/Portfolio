@@ -1,78 +1,109 @@
 .card {
-    width: 320px;
-    height: 350px;
-    padding: 20px;
-    margin-inline: 10px;
-    color: white;
-    background: linear-gradient(#212121, #212121) padding-box,
-                linear-gradient(145deg, transparent 35%,#e81cff, #40c9ff) border-box;
-    border: 2px solid transparent;
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-    transform-origin: right bottom;
-    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
-  }
-  
-  .card .main-content {
-    flex: 1;
-  }
-  .card .main-content .src{
-    font-weight: 400;
-    font-size: 15px;
-    padding-top: 4em;
-  }
-  
-  .card .header span:first-child {
-    font-weight: 600;
-    color: #717171;
-    margin-right: 4px;
-    font-size: x-large;
-  }
-  
-  .card .heading {
-    font-size: 24px;
-    margin: 24px 0 16px;
-    font-weight: 600;
-  }
-  
-  .card .categories {
-    display: flex;
-    gap: 8px;
-  }
-  
-  .card .categories span {
-    background-color: #e81cff;
-    padding: 4px 8px;
-    font-weight: 600;
-    text-transform: uppercase;
-    font-size: 12px;
-    border-radius: 50em;
-  }
-  
-  .card .footer {
-    font-weight: 200;
-    color: #717171;
-    margin-right: 4px;
-    font-size: medium;
-  }
-  
-  .card:hover {
-    rotate: 8deg;
-  }
+  width: 320px;
+  height: 350px;
+  padding: 20px;
+  margin-inline: 10px;
+  color: white;
+  background: linear-gradient(#212121, #212121) padding-box,
+    linear-gradient(145deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transform-origin: right bottom;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+  box-shadow: 10px 10px 9px 4px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 10px 9px 4px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 9px 4px rgba(0, 0, 0, 0.75);
+}
+
+.card .main-content {
+  flex: 1;
+}
+
+.card .main-content .src {
+  font-weight: 400;
+  font-size: 15px;
+  padding-top: 4em;
+}
+
+.card .header span:first-child {
+  font-weight: 600;
+  color: #717171;
+  margin-right: 4px;
+  font-size: x-large;
+}
+
+.card .heading {
+  font-size: 24px;
+  margin: 24px 0 16px;
+  font-weight: 600;
+}
+
+.card .categories {
+  display: flex;
+  gap: 8px;
+}
+
+.card .categories span {
+  background-color: #6220fb;
+  padding: 4px 8px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 12px;
+  border-radius: 50em;
+}
+
+.card .footer {
+  font-weight: 200;
+  color: #717171;
+  margin-right: 4px;
+  font-size: medium;
+}
+
+.card:hover {
+  rotate: 2deg;
+}
 
 .container {
   display: flex;
 }
+.btnPro {
+  border-radius: .25rem;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 400;
+  padding-left: 25px;
+  padding-right: 25px;
+  color: #fff;
+  -webkit-clip-path: polygon(0 0,0 0,100% 0,100% 0,100% calc(100% - 15px),calc(100% - 15px) 100%,15px 100%,0 100%);
+  clip-path: polygon(0 0,0 0,100% 0,100% 0,100% calc(100% - 15px),calc(100% - 15px) 100%,15px 100%,0 100%);
+  height: 40px;
+  font-size: 0.7rem;
+  line-height: 14px;
+  letter-spacing: 1.2px;
+  transition: .2s .1s;
+  background-image: linear-gradient(90deg,#1c1c1c,#6220fb);
+  border: 0 solid;
+  overflow: hidden;
+}
 
-@media screen and  (min-width: 46.25em) and (max-width: 63.9375em) {
-  .container{
+.btnPro:hover {
+  cursor: pointer;
+  transition: all .3s ease-in;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+@media screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+  .container {
     display: flex;
     flex-wrap: wrap;
   }
+
   .card {
     flex-grow: 1;
     flex-basis: 300px;
   }
- }
+}
