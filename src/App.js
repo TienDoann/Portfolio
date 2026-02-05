@@ -12,9 +12,13 @@ export default function App() {
   const [scroll, setScroll] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
-      window.scrollY >= 200 ? setScroll(true) : setScroll(false);
+      window.scrollY <= 200 ? setScroll(true) : setScroll(true);
     };
     window.addEventListener("scroll", handleScroll);
+    const check = false;
+    if (check) {
+      setScroll(false);
+    }
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };

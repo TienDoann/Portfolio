@@ -31,7 +31,6 @@ const projectsData = [
         title: 'Hệ thống quản lý bán và kiểm soát vé khu du lịch Làng Hoa Sadec',
         date: '2022',
         tech: ['Angular', 'React native', '.Net Core 6'],
-        link: null,
         author: 'Cty TNHH Điện điện tử C&T DevTeam'
     }
 ];
@@ -75,7 +74,7 @@ function Project() {
         fontFamily: 'ca',
         textTransform: 'uppercase'
     };
-
+    const =
     return (
         <div>
             <h1 style={titleStyle}>Some Highlight Project</h1>
