@@ -1,4 +1,4 @@
-language: vi
+language: en
 
 reviews:
   profile: senior-dev
@@ -6,7 +6,6 @@ reviews:
   auto_review:
     enabled: true
     drafts: false
-    min_changed_lines: 10
 
   rules:
     - security
@@ -14,16 +13,6 @@ reviews:
     - readability
     - best-practices
     - testing
-
-  focus:
-    frontend:
-      - "Remove redundant JSX / template elements"
-      - "Avoid unnecessary wrappers (div/span hell)"
-      - "Follow framework conventions strictly"
-      - "Split large components into smaller reusable ones"
-      - "Avoid inline logic inside JSX/templates"
-      - "Avoid duplicated UI logic"
-    backend:
 
   ignore:
     - "node_modules/**"
