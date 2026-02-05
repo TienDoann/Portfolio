@@ -1,88 +1,91 @@
-import './project.css'
+import './project.css';
 import React from 'react';
-function Project() {
+
+const projectsData = [
+    {
+        id: 1,
+        title: 'Quản lý Bán hàng linh kiện điện tử',
+        date: '2021-2022',
+        tech: ['ASP.NET'],
+        link: 'https://github.com/TienDoann/ProjectDA3-MVC',
+        author: 'Đoàn Liêng Tiến'
+    },
+    {
+        id: 2,
+        title: 'Lập trình Game trên thiết bị di động',
+        date: '2020-2021',
+        tech: ['Java'],
+        link: 'https://github.com/TienDoann/MobileGame',
+        author: 'Đoàn Liêng Tiến'
+    },
+    {
+        id: 3,
+        title: 'Lập trình game với thư viện PyGame',
+        date: '2021-2022',
+        tech: ['Python', 'Pygame'],
+        link: 'https://github.com/TienDoann/PyGame',
+        author: 'Đoàn Liêng Tiến'
+    },
+    {
+        id: 4,
+        title: 'Hệ thống quản lý bán và kiểm soát vé khu du lịch Làng Hoa Sadec',
+        date: '2022',
+        tech: ['Angular', 'React native', '.Net Core 6'],
+        link: null,
+        author: 'Cty TNHH Điện điện tử C&T DevTeam'
+    }
+];
+
+const ProjectCard = ({ project }) => {
     const handleClick = () => {
-        window.location.href = 'https://github.com/TienDoann/ProjectDA3-MVC'
+        if (project.link) {
+            window.location.href = project.link;
+        }
     };
-    const handleClick1 = () => {
-        window.location.href = 'https://github.com/TienDoann/MobileGame'
+
+    return (
+        <div className="card">
+            <div className="main-content">
+                <div className="header">
+                    <span>Article on</span>
+                    <span>{project.date}</span>
+                </div>
+                <p className="heading">{project.title}</p>
+                <div className="categories">
+                    {project.tech.map((tech, index) => (
+                        <span key={index}>{tech}</span>
+                    ))}
+                </div>
+                {project.link && (
+                    <p className="src">
+                        <button className="btnPro" onClick={handleClick}>
+                            Xem
+                        </button>
+                    </p>
+                )}
+            </div>
+            <div className="footer">{project.author}</div>
+        </div>
+    );
+};
+
+function Project() {
+    const titleStyle = {
+        color: 'white',
+        fontFamily: 'ca',
+        textTransform: 'uppercase'
     };
-    const handleClick2 = () => {
-        window.location.href = 'https://github.com/TienDoann/PyGame'
-    };
+
     return (
         <div>
-            <h1 style={{color:'white',fontFamily:"ca",textTransform:"uppercase"}}>Some Highlight Project</h1>
-            <div className='container'>
-            <div className="card">
-                <div className="main-content">
-                    <div className="header">
-                        <span>Article on</span>
-                        <span>2021-2022</span>
-                    </div>
-                    <p className="heading">Quản lý Bán hàng linh kiện điện tử</p>
-                    <div className="categories">
-                        <span>ASP.NET</span>
-                    </div>
-                    <p className='src'><button className='btnPro' onClick={handleClick}>Xem</button></p>
-                </div>
-                <div className="footer">
-                    by Đoàn Liêng Tiến
-                </div>
-            </div>
-            <div class="card">
-                <div class="main-content">
-                    <div class="header">
-                        <span>Article on</span>
-                        <span>2020-2021</span>
-                    </div>
-                    <p class="heading">Lập trình Game trên thiết bị di động</p>
-                    <div class="categories">
-                        <span>Java</span>
-                    </div>
-                    <p className='src'><button className='btnPro' onClick={handleClick1}>Xem</button></p>
-                </div>
-                <div class="footer">
-                    by Đoàn Liêng Tiến
-                </div>
-            </div>
-            <div class="card">
-                <div class="main-content">
-                    <div class="header">
-                        <span>Article on</span>
-                        <span>2021-2022</span>
-                    </div>
-                    <p class="heading">Lập trình game với thư viện PyGame</p>
-                    <div class="categories">
-                        <span>Python</span>
-                        <span>Pygame</span>
-                    </div>
-                    <p className='src'><button className='btnPro' onClick={handleClick2}>Xem</button></p>
-                </div>
-                <div class="footer">
-                    by Đoàn Liêng Tiến
-                </div>
-            </div>
-            <div class="card">
-                <div class="main-content">
-                    <div class="header">
-                        <span>Article on</span>
-                        <span>2022</span>
-                    </div>
-                    <p class="heading">Hệ thống quản lý bán và kiểm soát vé khu du lịch Làng Hoa Sadec</p>
-                    <div class="categories">
-                        <span>Angular</span>
-                        <span>React native</span>
-                        <span>.Net Core 6</span>
-                    </div>
-                    {/* <p className='src'>Source: (private)</p> */}
-                </div>
-                <div class="footer">
-                    by Cty TNHH Điện điện tử C&T DevTeam
-                </div>
-            </div>
+            <h1 style={titleStyle}>Some Highlight Project</h1>
+            <div className="container">
+                {projectsData.map((project) => (
+                    <ProjectCard key={project.id} project={project} />
+                ))}
             </div>
         </div>
     );
 }
+
 export default Project;
