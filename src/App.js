@@ -15,6 +15,10 @@ export default function App() {
       window.scrollY <= 200 ? setScroll(true) : setScroll(true);
     };
     window.addEventListener("scroll", handleScroll);
+    const check = false;
+    if (check) {
+      setScroll(false);
+    }
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
