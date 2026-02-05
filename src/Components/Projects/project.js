@@ -74,7 +74,7 @@ function Project() {
         fontFamily: 'ca',
         textTransform: 'uppercase'
     };
-
+    const =
     return (
         <div>
             <h1 style={titleStyle}>Some Highlight Project</h1>
