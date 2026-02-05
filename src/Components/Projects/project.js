@@ -69,6 +69,13 @@ const ProjectCard = ({ project }) => {
     );
 };
 
+/**
+ * Renders the Projects section header and a list of project cards.
+ *
+ * The component displays a styled title and a container that renders a ProjectCard for each item in `projectsData`.
+ *
+ * @returns {JSX.Element} A React element containing a header and a container with ProjectCard instances for each entry in `projectsData`.
+ */
 function Project() {
     const titleStyle = {
         color: 'white',
