@@ -1,5 +1,5 @@
 import './project.css';
-import React from 'react';
+import React, { useState } from 'react';
 
 const projectsData = [
     {
@@ -36,7 +36,7 @@ const projectsData = [
     }
 ];
 
-const ProjectCard = ({ project }) => {
+const ProjectCard = ({ project, onShowDetail }) => {
     const handleClick = () => {
         if (project.link) {
             window.location.href = project.link;
@@ -56,13 +56,16 @@ const ProjectCard = ({ project }) => {
                         <span key={index}>{tech}</span>
                     ))}
                 </div>
-                {project.link && (
-                    <p className="src">
+                <p className="src">
+                    {project.link && (
                         <button className="btnPro" onClick={handleClick}>
                             Xem
                         </button>
-                    </p>
-                )}
+                    )}
+                    <button className="btnPro" onClick={() => onShowDetail(project)}>
+                        Xem chi tiết
+                    </button>
+                </p>
             </div>
             <div className="footer">{project.author}</div>
         </div>
@@ -70,20 +73,47 @@ const ProjectCard = ({ project }) => {
 };
 
 function Project() {
+    const [selectedProject, setSelectedProject] = useState(null);
+
     const titleStyle = {
         color: 'white',
         fontFamily: 'ca',
         textTransform: 'uppercase'
     };
 
+    const handleClose = () => setSelectedProject(null);
+
     return (
         <div>
             <h1 style={titleStyle}>Some Highlight Project</h1>
             <div className="container">
                 {projectsData.map((project) => (
-                    <ProjectCard key={project.id} project={project} />
+                    <ProjectCard
+                        key={project.id}
+                        project={project}
+                        onShowDetail={setSelectedProject}
+                    />
                 ))}
             </div>
+
+            {selectedProject && (
+                <div className="modal-overlay" onClick={handleClose}>
+                    <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+                        <div className="modal-header">
+                            <h2>{selectedProject.title}</h2>
+                            <button className="close-btn" onClick={handleClose}>&times;</button>
+                        </div>
+                        <div className="modal-body">
+                            <p><strong>Ngày thực hiện:</strong> {selectedProject.date}</p>
+                            <p><strong>Công nghệ:</strong> {selectedProject.tech.join(', ')}</p>
+                            <p><strong>Tác giả:</strong> {selectedProject.author}</p>
+                            {selectedProject.link && (
+                                <p><strong>Link:</strong> <a href={selectedProject.link} target="_blank" rel="noreferrer">{selectedProject.link}</a></p>
+                            )}
+                        </div>
+                    </div>
+                </div>
+            )}
         </div>
     );
 }
