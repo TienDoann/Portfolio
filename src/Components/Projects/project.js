@@ -63,6 +63,7 @@ const ProjectCard = ({ project }) => {
                         </button>
                     </p>
                 )}
+                <div
             </div>
             <div className="footer">{project.author}</div>
         </div>
@@ -75,6 +76,10 @@ function Project() {
         fontFamily: 'ca',
         textTransform: 'uppercase'
     };
+    const a_X= 0;
+    if a_X === 1) {
+        return <div></div>;
+    }
 
     return (
         <div>
